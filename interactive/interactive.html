@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Coffee</title>
+  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/bigvideo.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>
+  <div class="container">
+      <div class="coffeeBtn">
+      	<a href="#"><img src="images/coffee_btn.png"></a><br>
+       
+      </div>
+      <div class="coffeText">
+       <a href="#"><img src="images/coffee_text.png" ></a>
+      </div>
+  </div>
+  <div class="content">
+    <img src="images/coffeeCup.jpg" ><br>
+    <p class="paragraph">Coffee is a brewed drink with a distinct aroma and flavor, prepared from roasted coffee beans, the seeds found inside "berries" of the Coffea plant. Coffee plants are cultivated in over 70 countries, primarily in the equatorial regions of the Americas, Southeast Asia, India and Africa. The two most commonly grown are the highly regarded arabica, and the less sophisticated but stronger and more hardy robusta. The latter is resistant to the coffee leaf rust, Hemileia vastatrix, but has a more bitter taste. Once ripe, coffee beans are picked, processed, and dried. Green (unroasted) coffee beans are one of the most traded agricultural commodities in the world. Once traded, the beans are roasted to varying degrees, depending on the desired flavor, before being ground and brewed to create coffee.</p>
+    <div class="beans">
+    <a href="#"><img src="images/beans.png"></a>
+    </div>
+  </div>
+</div>
+ <!-- BigVideo Dependencies -->
+ 	<script src="js/jquery-1.11.2.min.js"></script>
+ 	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/video.js"></script>
+    <!-- BigVideo -->
+    <script src="js/bigvideo.js"></script>
+
+    <!--coffee vid -->
+    <script>
+	    $(function() {
+            var BV = new $.BigVideo({useFlashForFirefox:false});
+			BV.init();
+            BV.show([
+            	{ type: "video/webm",  src: "video/coffe_bg.webm"  },
+                { type: "video/mp4",  src: "video/coffe_bg.mp4" },
+                { type: "video/ogg",  src: "video/coffe_bg.ogv" }
+                
+            ],{ambient:true});
+	    });
+
+      $( ".coffeeBtn" ).click(function() {
+  $( ".content" ).toggle( "slow", function() {
+    // Animation complete.
+  });
+});
+    </script>
+    
+</body>
+</html>
